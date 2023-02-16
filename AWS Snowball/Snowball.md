@@ -30,3 +30,17 @@ Move data via physicall briefcase computer more storage and on-site compute capa
 ### Snowball Edge come in 2 sizes 
 - 100 TB (83 TB of usable space)
 - **100 TB Clusterd** (45 TB per node)
+
+
+## Snowmobile 
+A 45-foot long ruggedized shipping container, pulled by a semi-tracker truck.
+Transfer upto **100PB** per snowmobile
+
+AWS personnel will help you connect you network to the snowmobile and when data transfer is complete they'll drive it back to AWS to import into s3 and glacier
+
+### Security features
+GPS tracking 
+Alarm monitoring
+24/7 video suerveillance
+An escort security vehicle while in transit(optional)
+
