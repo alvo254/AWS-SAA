@@ -36,3 +36,31 @@ Object storage is recognized for its inherent availability of the file objects. 
 **Block storage architecture**
 
 The basic block storage architecture consists of three components: the block storage, the compute system, and the operating system running on the compute system. The block storage is either physically or logically attached to the compute system. The operating system, which runs on the the compute system, then recognizes the block storage as available. The operating system formats or makes the block storage ready for use. In some situations, an application running on the compute system can act as the managing entity rather than the operating system. However, for most use cases, the operating system running on the computer system manages the block storage.
+
+### Block Storage Management 
+The operating system or application manages the block storage. Some of the aspects that the operating system manages are configuring the block size; creating and managing metadata; managing read, modify, and write activity; and managing file-level and block-level locking.
+
+### Block size
+The operating system must first format the block storage. When you format the block storage, you select the block size that best meets your use case. For some applications, small block sizes are more appropriate, and larger block sizes better serve other applications. Block size flexibility is a fundamental differentiator for block storage. You have the ability to format the storage to best service your application requirements.
+
+### Metadata management
+When data is stored, the operating system creates metadata. Metadata is data about the data. The metadata information helps to manage a data resource, such as resource type, permissions, and the time and way it was created. The metadata includes the information that the operating system and users need to identify and track the data.
+
+-   Metadata includes timestamp tracking for the data such as:
+    -   The creation or birth time (ctime), which is when the data was first created.
+    -   The modification time (mtime), which is when the data or metadata was last changed or modified.
+    -   The access time (atime), which is when the data was last accessed.
+-   Metadata tracks where the data is stored on the storage system. It tracks which blocks on the drives were used to store the data.
+-   Metadata also contains information about the data owner and access permissions: who owns the data and who can read or modify the data.
+
+
+### Read-write activity
+The operating system determines what controls, if any, are in place to manage access to the data. 
+
+-   Often the operating system uses metadata permissions to control who can access, modify, or delete the data. The operating system can also reference external sources such as Microsoft Active Directory or Lightweight Directory Access Protocol (LDAP) to determine these permissions.
+-   The operating system also manages how client access is managed when reading data and modifying data. The operating system determines how clients or applications are notified when another client or application is accessing data.
+-   The operating system manages where and when data is written to the block storage. It determines how writes are cached and staged before writing the blocks and which blocks to write to.
+-   The operating system also manages the caching or read activity: how are reads cached, what order reads are performed, and how are multiple read requests are managed.
+
+### Locking control
+The operating system also manages data integrity when data is being modified or deleted. The operating system can prevent other clients from modifying the data by applying a lock on the entire data file or on specific portions or blocks being modified. These are called file-level locking and block-level locking, respectively. Some operating systems can also place locks on certain block ranges.
