@@ -64,3 +64,6 @@ The operating system determines what controls, if any, are in place to manage ac
 
 ### Locking control
 The operating system also manages data integrity when data is being modified or deleted. The operating system can prevent other clients from modifying the data by applying a lock on the entire data file or on specific portions or blocks being modified. These are called file-level locking and block-level locking, respectively. Some operating systems can also place locks on certain block ranges.
+
+  
+![Wide range of Amazon EC2 workloads, enterprise applications, relational and NoSQL databases, big data analytics, and file/media workloads.](https://explore.skillbuilder.aws/files/a/w/aws_prod1_docebosaas_com/1676566800/kgcktXtGk-YWZ1jmo8N5fA/tincan/673211_1658875964_p1g8ubbhmf1r0d112hr7g1i81j324_zip/assets/UZ-iQA-EkC59vS55_MWSEoblAeBdzSTzG.png)
