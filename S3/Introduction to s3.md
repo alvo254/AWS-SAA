@@ -23,3 +23,40 @@ S3 is a universal namespace so bucket names must be unique.
 - One Zone IA - Still Fast! Objects only exists in one AZ. Availability is (95.5%). But cheaper than standard IA by 20% less 
 - Glacier - For long-term cold storage. Retrial of data can take minuntes to hours.
 - Glacier Deep Archive - The lowest cost storage class. Data retrieval time 12 hours.
+
+## S3 security 
+All new buckets are private when created by default.
+Access control is configured using **Bucket Policies** and **Access Control List (ACL)** This is legacy but not deprecated.
+
+## S3 Encryption 
+Traffic between you local host and s3 is achieved via SSL/TLS
+
+#### Server Side Encryption (SSE) -Encryption At Rest
+Amazon helps you encrypt the object data
+S3 Managed keys - AWS manages all keys
+SSE-AES s3 handles the key, uses AES-256 algorithim
+SSE-KMS Envelope encryption, AWS KMS and you manage the keys
+SSE-C Customer provided key managed by you
+
+Client-side Encryption 
+you encrypt your own files before uploading them to the s3
+
+## Data Consistency
+#### New Object (PUTS)
+Read After Write Consistency 
+When you upload a new s3 object you are able to read immediately after writting
+#### Overwrite (PUTS) or Delete Object (DELETES)
+Eventual Consistency
+When you overwrite or delet an object it takes time for s3 to replicate versions to AZs
+If you were to read immediately, S3 may return you and old copy. Generally you need to wait for a few seconds before reading.
+
+## Cross Region Replication (CRR)
+When enabled, any object that is uploaded will be automatically replicated to another region(s). Provides higher durability and potential disaster recovery for objects.
+You must have versioning turned on both the source and destination buckets.
+You can have the CRR replicate to another AWS account.
+
+## S3 Versioning
+- Store all version of an object in S3
+- Once enabled it cannot be disabled, only suspended on the bucket.
+- Fully integrates with S3 lifecycle rules
+- MFA Delete feature provides extra protecition against deletion of your data
