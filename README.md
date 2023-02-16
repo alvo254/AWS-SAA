@@ -2,6 +2,8 @@
 My notes on AWS Certified Solutions Architect
 To be broken down better 
 
+I will be adding provisioning with terraform for each category i create.
+
 ### Latency is measured as the amount of time between making a request to the storage system and receiving the response. Latency is often referred to as delay. Low-latency performance is a primary benefit for block storage.
 
 ### Throughput
