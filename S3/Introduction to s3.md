@@ -15,3 +15,11 @@ Object may consit of:
 ## S3 Bucket
 Bucket hold objects. Buckets can also have folders which in turn hold objects.
 S3 is a universal namespace so bucket names must be unique.
+
+## Storage Classes 
+- Standard (default) - Fast! 99.99% Availability. Replicated across at least 3 AZs
+- Intelligent Tiering - Use ML to analyze your object usage and determine the appropriate storage class. Data is moved to the most cost-effective access tier, without any perfomace impact or added overhead.
+- Standard infrequently Accessed(IA) - Still fast! cheaper if you access files less than once a month. Additional retrieval fee is applied. 50% less than standard.
+- One Zone IA - Still Fast! Objects only exists in one AZ. Availability is (95.5%). But cheaper than standard IA by 20% less 
+- Glacier - For long-term cold storage. Retrial of data can take minuntes to hours.
+- Glacier Deep Archive - The lowest cost storage class. Data retrieval time 12 hours.
