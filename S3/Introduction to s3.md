@@ -60,3 +60,29 @@ You can have the CRR replicate to another AWS account.
 - Once enabled it cannot be disabled, only suspended on the bucket.
 - Fully integrates with S3 lifecycle rules
 - MFA Delete feature provides extra protecition against deletion of your data
+
+## S3 Lifecycle Management 
+Automate the process of moving objects to different storage classes or deleteing objects all together. 
+Can be uses together with versioning
+Can be applied to both current and previous version.
+
+## Transfer Acceleration
+Fast and secure of files over long distances between your end users and s3 buckets.
+utilizes **CloudFronts** distributed **Edge Locations**. 
+Instead of uploading to your bucket, users use a **distinct URL** for and edge location.
+As data arrives at the edge location it is automatically routed to S3 over a specially optimized network path (AWS backbone network)
+
+## S3 Presigne URLs
+Generate a url which provides you temporary access to an object to either upload or download object data. Presigned Urls are commonly used to provide access to **private objects**. You can use AWS CLI or AWS SDK to generate presigned urls.
+
+## MFA Delete 
+Ensures users cannot delete objects from a bucket unless they provide their MFA code.
+MFA Delete can only be enabled under thest conditions.
+ - The AWS CLI must be used to turn on MFA
+ - The bucket must have the versioning turned on
+
+
+`aws s3api put-bucket-versioning --bucket <bucketname> --versioning-configuration status=Enabled,  MFADelete=Enabled --mfa <your-mfa-serial-number mfa-code> `
+
+Only the bcuket owner logged in as root user can delete objects from the bucket.
+
