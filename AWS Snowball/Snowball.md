@@ -44,3 +44,7 @@ Alarm monitoring
 24/7 video suerveillance
 An escort security vehicle while in transit(optional)
 
+## Snowcone
+[**AWS Snowcone**](https://aws.amazon.com/snowcone) is a small, rugged, and secure edge computing and data transfer device. 
+It features 2 CPUs, 4 GB of memory, and 8 TB of usable storage.
+
