@@ -14,3 +14,5 @@ HDDs are also referred to as spinning disks. HDDs are best suited for applicatio
 
 Input/output operations per second (IOPS) is a statistical storage measurement of the number of input/output (I/O) operations that can be performed per second. IOPS is also used to measure the number of operations at a given type of workload and operation size can occur per second. IOPS is typically used to measure random I/O read-write activities. Random means that the information used for the read-write activity is usually very small in size and the different information is not related to each other.
 Along with the low latency, block storage can often obtain higher IOPS than other types of storage. SSDs are best suited for applications that require high IOPS. SSDs provide the benefit of low latency and higher read and write performance for random I/O. SSDs do not have the seek times required for HDDs and are able to perform operations much faster.
+
+
