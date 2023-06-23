@@ -18,3 +18,23 @@ Along with the low latency, block storage can often obtain higher IOPS than othe
 AWS has a lot of the basic regulatory, legal, and security groundwork covered before you even launch your first service.
 AWS has invested significant planning and funds into resources and expertise relating to infrastructure administration. Its heavily protected and secretive datacenters, layers of redun- dancy, and carefully developed best-practice protocols would be difficult or even impossible for a regular enterprise to replicate.
 Where applicable, resources on the AWS platform are compliant with dozens of national and international standards, frameworks, and certifications, including ISO 9001, FedRAMP, NIST, and GDPR. (See http://aws.amazon.com/compliance/programs for more information.)
+
+
+## AWS CloudHSM
+CloudHSM (where HSM stands for “hardware security module”) launches virtual compute
+device clusters to perform cryptographic operations on behalf of your web server infrastructure. One typical goal is to off-load the burden of generating, storing, and managing cryptographic keys from your web servers so that their resources can be focused exclusively on
+serving your applications.
+CloudHSM provides a service that’s similar to AWS KMS, but according to AWS documentation (aws.amazon.com/cloudhsm/faqs), it is particularly useful for the following:
+■ Keys stored in dedicated, third-party validated HSMs under your exclusive control
+■ Federal Information Processing Standards (FIPS) 140-2 compliance
+■ Integration with applications using Public Key Cryptography Standards (PKCS)#11,
+Java JCE (Java Cryptography Extension), or Microsoft CNG (Cryptography API: Next
+Generation) interfaces
+■ High-performance in-VPC cryptographic acceleration (bulk crypto)
+You activate an HSM cluster by running the CloudHSM client as a daemon on each
+of your application hosts. The client is configured to fully encrypt communication with
+the HSM.
+
+
+
+
