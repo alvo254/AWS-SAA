@@ -35,6 +35,8 @@ You activate an HSM cluster by running the CloudHSM client as a daemon on each
 of your application hosts. The client is configured to fully encrypt communication with
 the HSM.
 
-
+The AWS Shared Responsibility Model
+Of course, those guarantees cover only the underlying AWS platform. The way you decide to use AWS resources is your business—and therefore your responsibility. So, it’s important to be familiar with the AWS Shared Responsibility Model.
+AWS guarantees the secure and uninterrupted operation of its “cloud.” That means its physical servers, storage devices, networking infrastructure, and managed services. AWS cus- tomers, as illustrated in Figure 1.3, are responsible for whatever happens within that cloud. This covers the security and operation of installed operating systems, client-side data, the movement of data across networks, end-user authentication and access, and customer data.
 
 
