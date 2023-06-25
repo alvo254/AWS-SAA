@@ -39,4 +39,19 @@ The AWS Shared Responsibility Model
 Of course, those guarantees cover only the underlying AWS platform. The way you decide to use AWS resources is your business—and therefore your responsibility. So, it’s important to be familiar with the AWS Shared Responsibility Model.
 AWS guarantees the secure and uninterrupted operation of its “cloud.” That means its physical servers, storage devices, networking infrastructure, and managed services. AWS cus- tomers, as illustrated in Figure 1.3, are responsible for whatever happens within that cloud. This covers the security and operation of installed operating systems, client-side data, the movement of data across networks, end-user authentication and access, and customer data.
 
+## S3 Service Architecture
+You organize your S3 files into buckets. By default, you’re allowed to create as many as 100 
+buckets for each of your AWS accounts. As with other AWS services, you can ask AWS to 
+raise that limit.
+Although an S3 bucket and its contents exist only within a single AWS region, the name 
+you choose for your bucket must be globally unique within the entire S3 system. There’s 
+some logic to this; you’ll often want your data located in a particular geographical region to 
+satisfy operational or regulatory needs. But at the same time, being able to reference a bucket 
+without having to specify its region simplifies the process.
+Here is the URL you would use to access a file called filename that’s in a bucket called 
+bucketname over HTTP:
+s3.amazonaws.com/bucketname/filename
+Naturally, this assumes you’ll be able to satisfy the object’s permissions requirements.
+This is how that same file would be addressed using the AWS CLI:
+s3://bucketname/filename
 
