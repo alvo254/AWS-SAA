@@ -56,5 +56,5 @@ This is how that same file would be addressed using the AWS CLI:
 s3://bucketname/filename
 
 ## Amazon Aurora
-
+Amazon Aurora is a relational database service that blends the availability and rapidity of high- end commercial databases with the simplicity and cost-effectiveness of open-source databases. Aurora is built with full compatibility with MySQL and PostgreSQL engines, enabling applications and tools to operate without necessitating modifications. It offers a variety of developer tools to construct serverless and machine learning (ML)-driven applications. The service is completely managed and automates time-intensive administration tasks, including hardware provision- ing, database setup, patching, and backups. It provides commercial-grade databases’ reliability, availability, and security while costing only a fraction of the price.
 
